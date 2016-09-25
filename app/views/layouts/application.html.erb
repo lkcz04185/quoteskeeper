@@ -9,6 +9,7 @@
 <body>
 <header>
 <div class="col-xs-3">
+  <%= link_to root_path, class: 'logo' do %>
   <div class="circle">
   <br />
   See if you
@@ -17,12 +18,13 @@
   <br />
   inspired!
   </div>
+  <% end %>
 </div>
 <div class="col-xs-4 slogan">
   Splurting out inspirational quotes
 </div>
 <div class="col-xs-5 links"> 
-<%= link_to 'Contribute', '#' %>
+<%= link_to 'Contribute', new_quote_path %>
 <%= link_to 'About', '#' %>
 </div>
 </header>
@@ -35,7 +37,7 @@
 <div class="footer">
   <div class="container">
     <div class="col-xs-6">
-      <%= link_to "This isn't enough, I need more", "#", class: 'next-quote' %>
+      <%= link_to "This isn't enough, I need more", root_path, class: 'next-quote' %>
     </div>
     <div class="col-xs-6 footer-blurb">
       Humbly proceeded by L.Kus at lkcz04185@gmail.com </br>
