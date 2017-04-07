@@ -3,6 +3,6 @@
         <br />
         <%= f.input :author, label: "Correct the author of the quote here?", placeholder: "Travis Kalanick" %>
         <br />
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-default"><%= link_to 'Close', root_path %> </button>
         <%= f.submit 'Correct Quote', class: 'btn btn-danger' %>
       <% end %>

@@ -29,9 +29,12 @@
   <%= link_to 'Contribute', '#', data: {toggle: 'modal', target: '#newModal'} %>
   &nbsp; &nbsp;
   <!-- creates Link to the form to correct a wrong quote -->
-  <%= link_to 'Correct', edit_quote_path(@quote) %>
+  <% if @quote %>
+    <%= link_to 'Correct', edit_quote_path(@quote) %>
+  <% end %>
   &nbsp; &nbsp;
   <%= link_to 'About', about_path %>
+    
 </div>
 </header>
 
@@ -59,7 +62,7 @@
   </div>
 </div>
 
-
+<% if @quote %>
 <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -83,7 +86,7 @@
    </div>
   </div>
 </div>
-
+<% end %>
 
 <hr />
 <br class="clear" />
