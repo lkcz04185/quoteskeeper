@@ -1,16 +1,18 @@
-<h2>
 <% if @quote.present? %>
+<h2>
   <span>Quote No. <%= @quote.id %></span>
   &nbsp;
   <u>Inspirational quote:</u>
-<% else %>
-  <span>No quotes exist so far, please contribute a quote.</span>
-<% end %>
 </h2>
 
 <h1><%= @quote.saying %></h1>
 <h2>- <%= @quote.author %></h2>
 
+<% else %>
+<h2>
+  <span>No quotes exist so far, please contribute a quote.</span>
+  </h2>
+<% end %>
 
 <br class="clear" />
 <br />
