@@ -1,11 +1,16 @@
 <h2>
-  <span>Splurty No. <%= @quote.id %></span>
+<% if @quote.present? %>
+  <span>Quote No. <%= @quote.id %></span>
   &nbsp;
   <u>Inspirational quote:</u>
+<% else %>
+  <span>No quotes exist so far, please contribute a quote.</span>
+<% end %>
 </h2>
 
 <h1><%= @quote.saying %></h1>
 <h2>- <%= @quote.author %></h2>
+
 
 <br class="clear" />
 <br />
